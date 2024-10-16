@@ -20,7 +20,7 @@ function setup() {
             let r = img.pixels[i] / 255;
             let g = img.pixels[i + 1] / 255;
             let b = img.pixels[i + 2] / 255;
-
+            //zmiana value jasnosci
             let v = Math.max(r, g, b) * 255;
 
             img_v.set(x, y, color(v));

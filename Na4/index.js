@@ -29,10 +29,11 @@ function setup() {
             let cmin = Math.min(r, g, b);
             let delta = cmax - cmin; // c
 
-            let s = (cmax === 0 ? 0 : delta / cmax) * 255; // HSV
+            //Saturacja
+            let s = (cmax === 0 ? 0 : delta / cmax) * 255;
             img_s.set(x, y, color(s));
 
-            let v = cmax * 255; // V chroma
+            let v = cmax * 255; // Value jasnosci
             img_v.set(x, y, color(v));
         }
     }

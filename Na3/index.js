@@ -18,6 +18,7 @@ function setup() {
     img_g.loadPixels();
     img_b.loadPixels();
 
+    //kolorowanie
     for (let x = 0; x < img.width; x++) {
         for (let y = 0; y < img.height; y++) {
             let i = 4 * (y * img.width + x);
@@ -43,6 +44,7 @@ function setup() {
     img_g.updatePixels();
     img_b.updatePixels();
 
+    //sumowanie pikseli
     img_sum.blend(img_r, 0, 0, 256, 256, 0, 0, 256, 256, ADD);
     img_sum.blend(img_g, 0, 0, 256, 256, 0, 0, 256, 256, ADD);
     img_sum.blend(img_b, 0, 0, 256, 256, 0, 0, 256, 256, ADD);

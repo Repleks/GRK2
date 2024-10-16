@@ -25,7 +25,7 @@ function setup() {
             let g = img.pixels[i + 1] / 255;
             let b = img.pixels[i + 2] / 255;
 
-            let cmax = Math.max(r, g, b); // V?
+            let cmax = Math.max(r, g, b);
             let cmin = Math.min(r, g, b);
             let delta = cmax - cmin; // c
 
@@ -49,13 +49,14 @@ function setup() {
 
             h *= 60;
             if (h < 0) h += 360;
-            img_h.set(x, y, color(h)); // Skala odcienia przeskalowana
+
+            img_h.set(x, y, color(h)); // odcien barwy
 
             let s = (cmax === 0 ? 0 : delta / cmax) * 255;
-            img_s.set(x, y, color(s)); // HSV
+            img_s.set(x, y, color(s)); //saturacja
 
             let v = cmax * 255;
-            img_v.set(x, y, color(v)); // V chroma
+            img_v.set(x, y, color(v)); // value jasnosci
         }
     }
 
